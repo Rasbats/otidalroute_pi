@@ -16,33 +16,30 @@ set(OCPN_TEST_REPO
     "mike-rossiter/otidalroute-alpha"
     CACHE STRING "Default repository for untagged builds"
 )
-#set(OCPN_BETA_REPO
-#    "mike-rossiter/otidalroute-beta"
-#    CACHE STRING
-#    "Default repository for tagged builds matching 'beta'"
-#)
-#set(OCPN_RELEASE_REPO
-#    "mike-rossiter/otidalroute-prod"
-#    CACHE STRING
-#    "Default repository for tagged builds not matching 'beta'"
-#)
+set(OCPN_BETA_REPO
+    "mike-rossiter/otidalroute-beta"
+    CACHE STRING
+    "Default repository for tagged builds matching 'beta'"
+)
+set(OCPN_RELEASE_REPO
+    "mike-rossiter/otidalroute-prod"
+    CACHE STRING
+    "Default repository for tagged builds not matching 'beta'"
+)
 
 #
 #
 # -------  Plugin setup --------
 #
 set(PKG_NAME otidalroute_pi)
-set(PKG_VERSION  1.1.0)
+set(PKG_VERSION  1.2.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
 set(DISPLAY_NAME otidalroute)    # Dialogs, installer artifacts, ...
 set(PLUGIN_API_NAME otidalroute) # As of GetCommonName() in plugin API
-set(PKG_SUMMARY "Simulate ship movements")
+set(PKG_SUMMARY "Plan a route with tidal current grib data")
 set(PKG_DESCRIPTION [=[
-Simulates navigation of a vessel. Using the sail option and a current
-grib file for wind data, simulates how a sailing vessel might react in
-those conditions. Using 'Preferences' the simulator is able to record AIS
-data from itself. This can be replayed to simulate collision situations.
+Use tidal current grib files to plan routes. Show tidal current arrows on the chart. Display tidal current data in a table.
 ]=])
 
 set(PKG_AUTHOR "Mike Rossiter")
@@ -51,7 +48,7 @@ set(PKG_HOMEPAGE https://github.com/Rasbats/otidalroute_pi)
 set(PKG_INFO_URL https://opencpn.org/OpenCPN/plugins/otidalroute.html)
 
 set(SRC
-            src/AboutDialog.cpp
+        src/AboutDialog.cpp
         src/AboutDialog.h
         src/bbox.cpp
         src/bbox.h
