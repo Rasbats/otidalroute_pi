@@ -76,7 +76,7 @@ static inline bool GribCurrent(GribRecordSet *grib, double lat, double lon,
   return true;
 }
 
-class otidalroute_pi : public opencpn_plugin_118 {
+class otidalroute_pi : public opencpn_plugin_120 {
 public:
   otidalroute_pi(void *ppimgr);
   ~otidalroute_pi(void);

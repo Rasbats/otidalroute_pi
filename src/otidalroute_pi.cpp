@@ -64,7 +64,7 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin *p) { delete p; }
 //
 //---------------------------------------------------------------------------------------------------------
 
-otidalroute_pi::otidalroute_pi(void *ppimgr) : opencpn_plugin_118(ppimgr) {
+otidalroute_pi::otidalroute_pi(void *ppimgr) : opencpn_plugin_120(ppimgr) {
   // Create the PlugIn icons
   initialize_images();
   wxFileName fn;
@@ -153,8 +153,12 @@ int otidalroute_pi::GetAPIVersionMinor() {
 }
 
 int otidalroute_pi::GetPlugInVersionMajor() { return PLUGIN_VERSION_MAJOR; }
-
 int otidalroute_pi::GetPlugInVersionMinor() { return PLUGIN_VERSION_MINOR; }
+int GetPlugInVersionPatch() { return PLUGIN_VERSION_PATCH; }
+int GetPlugInVersionPost() { return PLUGIN_VERSION_TWEAK; }
+const char *GetPlugInVersionPre() { return PKG_PRERELEASE; }
+const char *GetPlugInVersionBuild() { return PKG_BUILD_INFO; }
+
 
 wxBitmap *otidalroute_pi::GetPlugInBitmap() { return &m_panelBitmap; }
 

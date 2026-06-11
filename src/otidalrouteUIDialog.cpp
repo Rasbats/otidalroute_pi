@@ -814,7 +814,7 @@ void otidalrouteUIDialog::CalcDR(wxCommandEvent& event, bool write_file,
         route_dist = 0;
         myLast = 0;
         double total_dist = 0;
-        int i, c;
+        int c;
 
         lati = latN[0];
         loni = lonN[0];
@@ -823,7 +823,7 @@ void otidalrouteUIDialog::CalcDR(wxCommandEvent& event, bool write_file,
         spd = 0;
         dir = 0;
 
-        double VBG, BC, VBG1;
+        double VBG, VBG1;
         VBG = speed;
         VBG1 = 0;
         int tc_index = 0;
@@ -1570,7 +1570,7 @@ void otidalrouteUIDialog::CalcETA(wxCommandEvent& event, bool write_file,
           route_dist = 0;
           myLast = 0;
           double total_dist = 0;
-          int i, c;
+          int c;
 
           lati = latN[0];
           loni = lonN[0];
